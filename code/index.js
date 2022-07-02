@@ -2,7 +2,8 @@ const net = require('net');
 let server = net.createServer(function (socket) {
     console.log(3)
     socket.once('data', function (data) {
-        console.log(2,data)
+        console.log(2)
+        console.log(JSON.stringify(data))
         if (!data || data[0] !== 0x05) return socket.destroy();
         let addrLen = 0, remoteAddr = null, remotePort = null;
         socket.write(Buffer.from([5, 0]), function (err) {
