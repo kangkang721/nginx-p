@@ -1,11 +1,16 @@
+console.log('init')
 const net = require('net');
 let server = net.createServer(function (socket) {
+    console.log('init2')
     socket.once('data', function (data) {
+        console.log('init3')
         if (!data || data[0] !== 0x05) return socket.destroy();
         let addrLen = 0, remoteAddr = null, remotePort = null;
         socket.write(Buffer.from([5, 0]), function (err) {
+            console.log('init4')
             if (err) socket.destroy();
             socket.once('data', (data) => {
+                console.log('init5')
                 if (data.length < 7 || data[1] !== 0x01) return socket.destroy();  // 只支持 CONNECT 
                 try {
                     addrtype = data[3];// ADDRESS_TYPE 目标服务器地址类型
