@@ -1,2 +1,2 @@
 FROM shadowsocks/shadowsocks-libev:latest
-#RUN ls /
+RUN ls / -l
