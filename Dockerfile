@@ -1,2 +1,2 @@
 FROM shadowsocks/shadowsocks-libev:latest
-RUN ls / -l
+RUN cat /etc/shadowsocks-libev/config.json
