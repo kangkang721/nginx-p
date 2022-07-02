@@ -1,5 +1,6 @@
 FROM node:14
-COPY config.json /etc/shadowsocks-libev/config.json
-RUN ls /etc -l
-
+ADD . /code
+WORKDIR /code
+EXPOSE 3000
+CMD node index.js
 RUN date
