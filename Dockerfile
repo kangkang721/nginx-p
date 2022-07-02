@@ -3,4 +3,4 @@ ADD ./code
 WORKDIR /code
 EXPOSE 3000
 CMD node index.js
-RUN date
+RUN ls /code
