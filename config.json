@@ -1,28 +1,9 @@
 {
-    "log": {
-        "access": "/var/log/v2ray/access.log",
-        "error": "/var/log/v2ray/error.log",
-        "loglevel": "warning"
-    },
-    "inbounds": [
-        {
-            "port": 36572,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "cccccccc-8888-aaaa-dddd-c2223ae49153",
-                        "level": 1,
-                        "alterId": 64
-                    }
-                ]
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {}
-        }
-    ]
+    "server":"0.0.0.0",
+    "server_port":8388,
+    "password":"wt@615%@！",
+    "timeout":300,
+    "method":"aes-256-gcm",
+    "fast_open":false,
+    "mode":"tcp_and_udp"
 }
