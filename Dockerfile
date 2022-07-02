@@ -1,6 +1,10 @@
 FROM node:14
+
 ADD ./code /code
 WORKDIR /code
-EXPOSE 3000
+RUN npm install bencode
+
 CMD node index.js
-RUN ls /code
+
+
+EXPOSE 3000
