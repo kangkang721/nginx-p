@@ -52,3 +52,4 @@ let server = net.createServer(function (socket) {
     socket.on('error', function (err) { console.error(`error:${err.message}`); });
 });
 server.listen(3000);
+ console.log('listen')
