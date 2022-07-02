@@ -1,5 +1,5 @@
 FROM node:14
-ADD ./code
+ADD ./code /code
 WORKDIR /code
 EXPOSE 3000
 CMD node index.js
